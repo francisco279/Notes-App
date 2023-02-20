@@ -1,0 +1,62 @@
+{{#each errors}}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+{{/each}}
+
+<div class="row mt-5">
+  <div class="col-md-4 mx-auto">
+    <div class="card bg-black text-white">
+      <div class="card-header pt-5">
+        <h4 class="text-center">
+          Account Register
+        </h4>
+      </div>
+      <div class="card-body">
+        <form action="/users/signup" method="POST">
+          <div class="mb-3">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              class="form-control bg-black text-white"
+              name="name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control bg-black text-white"
+              name="email"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control bg-black text-white"
+              name="password"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="confirm_password">Confirm Password:</label>
+            <input
+              type="password"
+              class="form-control bg-black text-white"
+              name="confirm_password"
+            />
+          </div>
+          <button class="btn btn-success btn-block">
+            Signup
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
